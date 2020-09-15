@@ -5,5 +5,5 @@ import java.util.Map;
 
 public interface IUserService {
 
-    public List<Map<String, Object>> selectAll();
+    List<Map<String, Object>> selectCityAll();
 }

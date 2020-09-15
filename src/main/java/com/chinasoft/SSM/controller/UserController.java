@@ -12,18 +12,19 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.chinasoft.SSM.service.IUserService;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-@RequestMapping("/user")
 public class UserController {
     @Autowired
     private IUserService userService;
 
-    @RequestMapping("/showUser")
-    public String toIndex(HttpServletRequest request) {
-		System.out.println("controller ... ");
-		userService.selectAll();
-        return "showUser";
+    @RequestMapping("/showCity")
+    @ResponseBody
+    public List<Map<String, Object>> toIndex(HttpServletRequest request) {
+        List<Map<String, Object>> maps = userService.selectCityAll();
+        System.out.println(maps);
+        return maps;
     }
 
 }

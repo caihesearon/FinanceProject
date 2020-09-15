@@ -5,5 +5,5 @@ import java.util.List;
 import java.util.Map;
 
 public interface IUserDao {
-    List<Map<String, Object>> selectAll();
+    List<Map<String, Object>> selectCityAll();
 }

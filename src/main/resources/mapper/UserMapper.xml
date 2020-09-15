@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.chinasoft.SSM.dao.IUserDao">
-   
-  <select id="selectAll"   resultType="map">
-    select 
-    *
-    from help_keyword
-   
-  </select>
- </mapper>
+
+    <select id="selectCityAll" resultType="map">
+      select    tcy.CITY_ID  as cityId ,
+                tcy.CITY_NAME as cityName,
+                 tcy.CITY_PINYINMA as cityPinYinMa
+        from tb_city as tcy
+    </select>
+
+</mapper>

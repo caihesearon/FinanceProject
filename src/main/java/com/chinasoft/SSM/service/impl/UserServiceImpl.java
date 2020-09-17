@@ -18,4 +18,18 @@ public class UserServiceImpl implements IUserService {
     public List<Map<String, Object>> selectCityAll() {
         return dao.selectCityAll();
     }
+    @Override
+    public List<Map<String, Object>> selectIndexPageHeadNumber(
+            Map<String, Object> map) {
+        // TODO Auto-generated method stub
+        return dao.selectIndexPageHeadNumber(map);
+    }
+
+    @Override
+    public List<Map<String, Object>> selectCityCouponByCityId(
+            Map<String, Object> map) {
+        // TODO Auto-generated method stub
+        return dao.selectCityCouponByCityId(map);
+    }
+
 }
